@@ -53,11 +53,11 @@
             timeout-ms = <100>;
         };
 
-        Search {
-            bindings = <&kp LS(LC(F19))>;
-            key-positions = <37 40>;
-            layers = <0>;
-        };
+        //Search {
+        //    bindings = <&kp LS(LC(F19))>;
+        //    key-positions = <37 40>;
+        //    layers = <0>;
+        //};
     };
 
     keymap {
