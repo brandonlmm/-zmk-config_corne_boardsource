@@ -1,0 +1,31 @@
+if SHIELD_CORNE_DONGLE
+
+# Nice short USB name:
+config ZMK_KEYBOARD_NAME
+    default "Corne Dongle"
+
+# Split topology; this device is the CENTRAL
+config ZMK_SPLIT
+    default y
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+# We have 2 peripherals (left + right)
+config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
+    default 2
+
+# Room for 2 peripherals + up to 5 host profiles
+config BT_MAX_CONN
+    default 7
+config BT_MAX_PAIRED
+    default 7
+
+# Expose as a USB keyboard to the PC
+config ZMK_USB
+    default y
+
+# (Optional but handy) Turn on ZMK Studio on the dongle
+config ZMK_STUDIO
+    default y
+
+endif
