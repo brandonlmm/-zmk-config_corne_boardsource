@@ -28,4 +28,6 @@ config ZMK_USB
 config ZMK_STUDIO
     default y
 
+config ZMK_STUDIO_UNLOCK_DEFAULT
+    default y
 endif
