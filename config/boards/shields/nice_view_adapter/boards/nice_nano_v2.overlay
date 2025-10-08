@@ -1,2 +1,3 @@
-&oled { cs-gpios = <&pro_micro 16 GPIO_ACTIVE_LOW>; spi-max-frequency = <4000000>; segment-remap; com-invdir; };
-
+&nice_view_spi {
+    cs-gpios = <&pro_micro 16 GPIO_ACTIVE_LOW>;
+};
