@@ -20,11 +20,11 @@ include:
     cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_USB=y -DCONFIG_ZMK_DISPLAY=n
     
   - board: nice_nano_v2
-    shield: corne_left ssd1306_128x64_spi
+    shield: corne_left nice_view
     cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n -DCONFIG_ZMK_DISPLAY=y
 
   - board: nice_nano_v2
-    shield: corne_right ssd1306_128x64_spi
+    shield: corne_right nice_view
     cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n -DCONFIG_ZMK_DISPLAY=y
 
 
