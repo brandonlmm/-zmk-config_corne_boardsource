@@ -1,10 +1,2 @@
 / { chosen { zephyr,display = &nice_view_spi; }; };
-
-/* The SPI shield needs CS defined for your board.
- * On nice!nano / Pro Micro footprint, CS is commonly on D4 → &pro_micro 16.
- * Try this first:
- */
-&nice_view_spi {
-    cs-gpios = <&pro_micro 16 GPIO_ACTIVE_HIGH>;
-    rotation = <180>;   // flip if your screen is upside down
-};
+&nice_view_spi { cs-gpios = <&pro_micro 16 GPIO_ACTIVE_HIGH>; rotation = <180>; };
