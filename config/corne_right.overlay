@@ -1,1 +1,2 @@
-&nice_view_spi { cs-gpios = <&pro_micro 16 GPIO_ACTIVE_HIGH>; };
+/ { chosen { zephyr,display = &nice_view; }; };
+&nice_view { cs-gpios = <&pro_micro 16 GPIO_ACTIVE_HIGH>; rotation = <180>; };
