@@ -13,15 +13,32 @@
 #
 ---
 include:
+  # ---- Dongle (central, no display) ----
   - board: seeeduino_xiao_ble
     shield: corne_dongle
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_USB=y -DCONFIG_ZMK_DISPLAY=n
 
+  # ---- Left (peripheral) ----
   - board: nice_nano_v2
     shield: corne_left nice_view_adapter nice_view
-    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n -DCONFIG_ZMK_DISPLAY=y
+    cmake-args: >
+      -DCONFIG_ZMK_SPLIT=y
+      -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+      -DCONFIG_ZMK_DISPLAY=y
+      -DCONFIG_ZMK_DISPLAY_STATUS_SCREEN_BUILT_IN=y
+      -DCONFIG_ZMK_DISPLAY_STATUS_SCREEN_CUSTOM=n
+      -DCONFIG_ZMK_WIDGET_BATTERY_STATUS=y
+      -DCONFIG_ZMK_WIDGET_BATTERY_STATUS_SHOW_PERCENTAGE=y
 
+  # ---- Right (peripheral) ----
   - board: nice_nano_v2
     shield: corne_right nice_view_adapter nice_view
-    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n -DCONFIG_ZMK_DISPLAY=y
+    cmake-args: >
+      -DCONFIG_ZMK_SPLIT=y
+      -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+      -DCONFIG_ZMK_DISPLAY=y
+      -DCONFIG_ZMK_DISPLAY_STATUS_SCREEN_BUILT_IN=y
+      -DCONFIG_ZMK_DISPLAY_STATUS_SCREEN_CUSTOM=n
+      -DCONFIG_ZMK_WIDGET_BATTERY_STATUS=y
+      -DCONFIG_ZMK_WIDGET_BATTERY_STATUS_SHOW_PERCENTAGE=y
