@@ -1,5 +1,1 @@
-&nice_view_spi {
-    cs-gpios = <&pro_micro 16 GPIO_ACTIVE_HIGH>;
-    /* optional, if your display is upside down: */
-    // rotation = <180>;
-};
+&nice_view_spi { cs-gpios = <&pro_micro 16 GPIO_ACTIVE_HIGH>; };
