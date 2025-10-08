@@ -7,13 +7,11 @@
 #include <zmk/display/widgets/output_status.h>
 
 static lv_obj_t *screen;
-
 static struct zmk_widget_battery_status battery_widget;
 static struct zmk_widget_layer_status   layer_widget;
 static struct zmk_widget_output_status  output_widget;
 
-lv_obj_t *zmk_display_status_screen(void)
-{
+lv_obj_t *zmk_display_status_screen(void) {
     screen = lv_obj_create(NULL);
 
     /* Battery % (top-right) */
